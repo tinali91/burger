@@ -7,10 +7,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <ul>
+      <h2 class="text-center">Eat these burgers!</h2>
+      <ul class="listOne">
         {{#each burgers}}
         {{#unless devoured}}
-        <li class="listOne">
+        <li>
           {{burger_name}}
           <button class="devour btn btn-secondary px-2" data-id="{{this.id}}" data-devoured="{{devoured}}">
             Devour it!
@@ -21,10 +22,11 @@
       </ul>
     </div>
     <div class="col-md-6">
-      <ul>
+      <h2 class="text-center">You already ate these.</h2>
+      <ul class="listTwo">
         {{#each burgers}}
         {{#if devoured}}
-        <li class="listTwo">
+        <li>
           {{burger_name}}
         </li>
         {{/if}}
